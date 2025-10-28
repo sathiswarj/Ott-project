@@ -1,3 +1,3 @@
 export const ApiEndPoint = {
-    corePath : "https://backend-ott-project.onrender.com/api"
+    corePath : "https://project-ott-backend.onrender.com/api"
 }
