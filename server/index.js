@@ -8,7 +8,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
  app.use(cors({
-    origin: ['https://ott-project.onrender.com', 'http://localhost:3000'], // Add frontend URLs
+    origin: ['https://ott-project-frontend-dn67.onrender.com/', 'http://localhost:3000'], // Add frontend URLs
     credentials: true
 }));
 
