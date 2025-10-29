@@ -37,7 +37,7 @@ npm install
 npm start
 ```
 
-Runs on: `http://localhost:3000`
+Runs on: `http://localhost:5000`
 
 ---
 
@@ -63,58 +63,6 @@ export const ApiEndPoint = {
 
 ```
 
-### 3. Push to GitHub
-
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git push
-```
-
-### 4. Deploy Backend (Render.com)
-
-- New Web Service → Connect GitHub
-- **Root Directory:** `server`
-- **Build Command:** `npm install`
-- **Start Command:** `node index.js`
-- **Environment Variables:**
-  - `MONGODB_URI`
-  - `PORT`
-  - `JWT_SECRET`
-
-Copy backend URL: `https://project-ott-backend.onrender.com`
-
-### 5. Deploy Frontend (Render.com)
-
-- New Static Site → Connect GitHub
-- **Root Directory:** `project`
-- **Build Command:** `npm install && npm run build`
-- **Publish Directory:** `build`
- 
-
-### 6. Update Backend CORS
-
-Update backend with actual frontend URL, commit and push.
-
----
-
-## 🐛 Troubleshooting
-
-**CORS Error:**
-- Check backend CORS has frontend URL
-- Use `https://` not `http://`
-- Check Render logs
-
-**MongoDB Error:**
-- Allow all IPs (0.0.0.0/0) in MongoDB Atlas
-- Check `MONGODB_URI` is correct
-
-**Build Failed:**
-- Check `package.json` has correct scripts
-- Verify all dependencies installed
-
----
 
 ## 📝 Common Commands
 
@@ -126,22 +74,33 @@ node index.js            # Run normally
 # Frontend
 npm start                # Development server
 npm run build            # Production build
-
-# Git
-git add .
-git commit -m "message"
-git push
 ```
 
 ---
 
-## 🔐 Security
+Authentication Implemented
 
-- Never commit `.env` files (add to `.gitignore`)
-- Use strong JWT secrets (32+ characters)
-- Hash passwords with bcrypt
+You can test the authentication feature using the following credentials:
+
+# Email: newuser@gmail.com
+# Password: Newuser123
 
 ---
+
+ Migration & Navigation Instructions
+
+Signup → Create a new account
+
+Login → Access your account
+
+Home Page (Table) → View main content or data table
+
+Logout → Safely log out of your session
+
+Login again → Verify authentication works properly
+
+---
+
 
 **Deployed URLs:**
 - Frontend: `https://ott-project.onrender.com`
